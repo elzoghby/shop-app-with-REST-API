@@ -18,12 +18,7 @@ class Auth with ChangeNotifier {
     return _userid;
   }
 
-  String get token {
-    if (_expireDate != null &&
-        _expireDate.isAfter(DateTime.now()) &&
-        _token != null) return _token;
-    return null;
-  }
+
 
   Future<void> authentication(String email, String password, bool sign) async {
     String urlState;
